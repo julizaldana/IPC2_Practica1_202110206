@@ -21,10 +21,6 @@ if __name__=='__main__':
             print("Bienvenido " + nombrepedido + "!")
                 
 
-
-
-
-
         elif respuesta=='2':
             exit()
 
