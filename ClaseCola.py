@@ -39,3 +39,21 @@ class Cola:
     def primeroencola(self):
         return self.head.data
 
+    
+    #VERIFICAR SI LA COLA ESTÁ VACÍA
+    def ColaVacia(self):
+        if self.head==None:
+            return True
+        else:
+            return False
+
+    #IMPRIMIR LA COLA DE LAS PERSONAS
+    def imprimirCola(self):
+        print("----------------------------")
+        print("Las Ordenes en la cola son:")
+        print("----------------------------")
+        temp=self.head
+        while temp is not None:
+            print(temp.data,end="   le sigue       ")
+            temp=temp.next
+
