@@ -11,8 +11,10 @@ if __name__=='__main__':
         print("---------------------------------------------")
         print("MENU - SHUCOS DE GUATEMALA")
         print("1. Ordenar un shuco")
-        print("2. Información Estudiante")
-        print("3. Salir")
+        print("2. Ver Cola de Ordenes")
+        print("3. Recibir orden")
+        print("4. Información Estudiante")
+        print("5. Salir")
         print("---------------------------------------------")
         respuesta = input("Ingrese una opcion: ")
 
@@ -22,6 +24,7 @@ if __name__=='__main__':
             print("Bienvenido " + nombrepedido + "!")
             
 
+   
             print("------------------------------------")
             print("             INGREDIENTES            ")
             print("Salchicha - 2 minutos")
@@ -60,12 +63,23 @@ if __name__=='__main__':
 
             return menu()
 
+
         elif respuesta=='2':
+            cola.imprimirCola()
+            return menu()
+
+        elif respuesta=='3':
+            orden = cola.desencolar()
+            print('La orden está lista para    :' + orden)
+            print('¡Regrese pronto!')
+            return menu()
+
+
+        elif respuesta=='4':
             print("NOMBRE: Julio Alejandro Zaldaña Ríos")
             print("CARNET: 202110206")
             return menu()
-            
-        elif respuesta=='3':
+        elif respuesta=='5':
             exit()
 
 
