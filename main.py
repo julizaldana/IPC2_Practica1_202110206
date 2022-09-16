@@ -21,7 +21,7 @@ if __name__=='__main__':
             nombrepedido=input()
             print("Bienvenido " + nombrepedido + "!")
             
-            
+
             print("------------------------------------")
             print("             INGREDIENTES            ")
             print("Salchicha - 2 minutos")
@@ -33,6 +33,30 @@ if __name__=='__main__':
             print("¿Qué tipo de shuco quieres ordenar?")
 
             shuco = input("")
+
+            salchichatime = 2
+            chorizotime = 3
+            salamitime = 1.5
+            longanizatime = 4
+            costillatime = 6
+
+            if shuco=='Salchicha' or 'salchicha':
+                print("¿Quieres agregarle algún otro ingrediente?")
+                shuco2 = input("")
+                if shuco2 =='Salchicha' or 'salchicha':
+                    cola.encolar('Nombre:    ' + nombrepedido + '  Shuco con ingredientes     :' + shuco + ',' + shuco2 + ' Tiempo de preparación:   4 minutos')
+
+            elif shuco=='Chorizo' or 'chorizo':
+                cola.encolar(nombrepedido + '  ' + shuco + '   ' + '3 min' + '      ')
+
+            elif shuco=='Longaniza' or 'longaniza':
+                cola.encolar(nombrepedido + '   ' + shuco + '   ' + '4 min' + '   ')
+
+            elif shuco=='Salami' or 'salami':
+                cola.encolar(nombrepedido + '   ' + shuco + '   ' + '1.5 min' + '     ')
+
+            elif shuco=='Costilla' or 'costilla':
+                cola.encolar(nombrepedido + '   ' + shuco + '   ' + '6 min' + '     ')
 
             return menu()
 
