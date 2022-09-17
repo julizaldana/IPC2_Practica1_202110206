@@ -3,50 +3,51 @@ import os
 
 class Node:
     
-    def __init__(self, data=None, next=None, prev=None):
+    def __init__(self, data=None, siguiente=None, anterior=None):
         self.data = data
-        self.next = next
-        self.prev = prev
+        self.siguiente = siguiente
+        self.anterior = anterior
 
 
 class Cola:
 
     def __init__(self):
-        self.head = None
-        self.last = None
+        self.cabeza = None
+        self.ultimo = None
 
     #AGREGAR UNA PERSONA A LA COLA
     def encolar(self, data):
         node = Node(data)
-        if self.last == None:
-            self.head = node
-            self.last = self.head
+        if self.ultimo == None:
+            self.cabeza = node
+            self.ultimo = self.cabeza
         else:
-            self.last.next = node
-            self.last.next.prev = self.last
-            self.last = self.last.next
+            self.ultimo.siguiente = node
+            self.ultimo.siguiente.anterior = self.ultimo
+            self.ultimo = self.ultimo.siguiente
 
 
     #QUITAR UNA PERSONA DE LA COLA (PRIMERA QUE SALE)
     def desencolar(self):
-        if self.head == None:
-            return None
+        if self.cabeza.data == None:
+            print("No hay ordenes por entregar")
         else:
-            temp = self.head.data
-            self.head = self.head.next
-            self.head.prev = None
+            temp = self.cabeza.data
+            self.cabeza = self.cabeza.siguiente
             return temp
 
 
     #MOSTRAR LA PRIMERA PERSONA EN LA COLA
     def primeroencola(self):
-        return self.head.data
+        if self.cabeza == None:
+            print("No hay ninguna orden en la cola")
+        else:
+            return self.cabeza.data
 
     #VERIFICAR SI LA COLA ESTÁ VACÍA
     def ColaVacia(self):
-
-        if self.head==None:
-            return True
+        if self.cabeza == None:
+            print("No hay ninguna orden en la cola")
         else:
             return False
 
@@ -56,9 +57,9 @@ class Cola:
         print("----------------------------")
         print("Las Ordenes en la cola son:")
         print("----------------------------")
-        temp=self.head
+        temp=self.cabeza
         while temp != None:
             print(temp.data,end="   le sigue       ")
-            temp=temp.next
+            temp=temp.siguiente
 
 
