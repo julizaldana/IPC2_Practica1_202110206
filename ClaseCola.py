@@ -3,10 +3,10 @@ import os
 
 class Node:
     
-    def __init__(self, data):
+    def __init__(self, data=None, next=None, prev=None):
         self.data = data
-        self.next = None
-        self.prev = None
+        self.next = next
+        self.prev = prev
 
 
 class Cola:
@@ -18,7 +18,7 @@ class Cola:
     #AGREGAR UNA PERSONA A LA COLA
     def encolar(self, data):
         node = Node(data)
-        if self.last is None:
+        if self.last == None:
             self.head = node
             self.last = self.head
         else:
@@ -29,7 +29,7 @@ class Cola:
 
     #QUITAR UNA PERSONA DE LA COLA (PRIMERA QUE SALE)
     def desencolar(self):
-        if self.head is None:
+        if self.head == None:
             return None
         else:
             temp = self.head.data
@@ -57,7 +57,7 @@ class Cola:
         print("Las Ordenes en la cola son:")
         print("----------------------------")
         temp=self.head
-        while temp is not None:
+        while temp != None:
             print(temp.data,end="   le sigue       ")
             temp=temp.next
 
