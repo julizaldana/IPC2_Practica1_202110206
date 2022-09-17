@@ -26,6 +26,7 @@ class Cola:
             self.last.next.prev = self.last
             self.last = self.last.next
 
+
     #QUITAR UNA PERSONA DE LA COLA (PRIMERA QUE SALE)
     def desencolar(self):
         if self.head is None:
@@ -48,6 +49,7 @@ class Cola:
             return True
         else:
             return False
+
 
     #IMPRIMIR LA COLA DE LAS PERSONAS
     def imprimirCola(self):

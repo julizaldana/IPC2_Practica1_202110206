@@ -24,7 +24,6 @@ if __name__=='__main__':
             print("Bienvenido " + nombrepedido + "!")
             
 
-   
             print("------------------------------------")
             print("             INGREDIENTES            ")
             print("1. Salchicha - 2 minutos")
@@ -132,4 +131,3 @@ if __name__=='__main__':
 
     menu()
 
-    
