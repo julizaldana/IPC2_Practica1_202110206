@@ -1,5 +1,5 @@
-#Se utiliza FIFO (First in First Out)
 import os
+#Se utiliza FIFO (First in First Out)
 
 class Node:
     
@@ -7,6 +7,7 @@ class Node:
         self.data = data
         self.next = None
         self.prev = None
+
 
 class Cola:
 
@@ -16,11 +17,12 @@ class Cola:
 
     #AGREGAR UNA PERSONA A LA COLA
     def encolar(self, data):
+        node = Node(data)
         if self.last is None:
-            self.head = Node(data)
+            self.head = node
             self.last = self.head
         else:
-            self.last.next = Node(data)
+            self.last.next = node
             self.last.next.prev = self.last
             self.last = self.last.next
 
@@ -39,9 +41,9 @@ class Cola:
     def primeroencola(self):
         return self.head.data
 
-    
     #VERIFICAR SI LA COLA ESTÁ VACÍA
     def ColaVacia(self):
+
         if self.head==None:
             return True
         else:
@@ -56,4 +58,5 @@ class Cola:
         while temp is not None:
             print(temp.data,end="   le sigue       ")
             temp=temp.next
+
 

@@ -27,37 +27,86 @@ if __name__=='__main__':
    
             print("------------------------------------")
             print("             INGREDIENTES            ")
-            print("Salchicha - 2 minutos")
-            print("Chorizo - 3 minutos")
-            print("Salami - 1.5 minutos")
-            print("Longaniza - 4 minutos")
-            print("Costilla - 6 minutos")
+            print("1. Salchicha - 2 minutos")
+            print("2. Chorizo - 3 minutos")
+            print("3. Salami - 1.5 minutos")
+            print("4. Longaniza - 4 minutos")
+            print("5. Costilla - 6 minutos")
             print("------------------------------------")
             print("¿Qué tipo de shuco quieres ordenar?")
 
             shuco = input("")
-            
-            if (shuco=='Salchicha' or 'salchicha'):
+
+
+            if shuco=='1':
                 print("¿Quieres agregarle algún otro ingrediente?")
                 shuco2 = input("")
-                if (shuco2 =='Salchicha' or 'salchicha'):
-                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + shuco + ' , ' + shuco2 + ' || Tiempo de preparación:  4 minutos')
+                if shuco2 =='1':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Salchicha' + ' , ' + 'Salchicha' + ' || Tiempo de preparación:  4 minutos')
+                elif shuco2 == '2':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Salchicha' + ' , ' + 'Chorizo' + ' || Tiempo de preparación:  5 minutos')
+                elif shuco2 == '3':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Salchicha' + ' , ' + 'Salami' + ' || Tiempo de preparación:  3.5 minutos')
+                elif shuco2 == '4':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Salchicha' + ' , ' + 'Longaniza' + ' || Tiempo de preparación:  6 minutos')
+                elif shuco2 == '5':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Salchicha' + ' , ' + 'Costilla' + ' || Tiempo de preparación:  8 minutos')
 
-            elif (shuco=='Chorizo' or 'chorizo'):
-                cola.encolar(nombrepedido + '  ' + shuco + '   ' + '3 min' + '      ')
+            elif shuco=='2':
+                print("¿Quieres agregarle algún otro ingrediente?")
+                shuco2 = input("")
+                if shuco2 =='1':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Chorizo' + ' , ' + 'Salchicha' + ' || Tiempo de preparación:  5 minutos')
+                elif shuco2 == '2':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Chorizo' + ' , ' + 'Chorizo' + ' || Tiempo de preparación:  6 minutos')
+                elif shuco2 == '3':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Chorizo' + ' , ' + 'Salami' + ' || Tiempo de preparación:  4.5 minutos')
+                elif shuco2 == '4':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Chorizo' + ' , ' + 'Longaniza' + ' || Tiempo de preparación: 7 minutos')
+                elif shuco2 == '5':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Chorizo' + ' , ' + 'Costilla' + ' || Tiempo de preparación:  9 minutos')
 
-            elif (shuco=='Longaniza' or 'longaniza'):
-                cola.encolar(nombrepedido + '   ' + shuco + '   ' + '4 min' + '   ')
+            elif shuco=='3':
+                print("¿Quieres agregarle algún otro ingrediente?")
+                shuco2 = input("")
+                if shuco2 =='1':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Salami' + ' , ' + 'Salchicha' + ' || Tiempo de preparación:  3.5 minutos')
+                elif shuco2 == '2':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Salami' + ' , ' + 'Chorizo' + ' || Tiempo de preparación: 4.5 minutos')
+                elif shuco2 == '3':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Salami' + ' , ' + 'Salami' + ' || Tiempo de preparación:   3 minutos')
+                elif shuco2 == '4':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Salami' + ' , ' + 'Longaniza' + ' || Tiempo de preparación:  5.5 minutos')
+                elif shuco2 == '5':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Salami' + ' , ' + 'Costilla' + ' || Tiempo de preparación:  7.5 minutos')
 
-            elif (shuco=='Salami' or 'salami'):
-                cola.encolar(nombrepedido + '   ' + shuco + '   ' + '1.5 min' + '     ')
+            elif shuco=='4':
+                print("¿Quieres agregarle algún otro ingrediente?")
+                shuco2 = input("")
+                if shuco2 =='1':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Longaniza' + ' , ' + 'Salchicha' + ' || Tiempo de preparación:  6 minutos')
+                elif shuco2 == '2':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Longaniza' + ' , ' + 'Chorizo' + ' || Tiempo de preparación:  7 minutos')
+                elif shuco2 == '3':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Longaniza' + ' , ' + 'Salami' + ' || Tiempo de preparación:  5.5 minutos')
+                elif shuco2 == '4':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Longaniza' + ' , ' + 'Longaniza' + ' || Tiempo de preparación:  8 minutos')
+                elif shuco2 == '5':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Longaniza' + ' , ' + 'Costilla' + ' || Tiempo de preparación:  10 minutos')
 
-            elif (shuco=='Costilla' or 'costilla'):
-                cola.encolar(nombrepedido + '   ' + shuco + '   ' + '6 min' + '     ')
-
-            else:
-                print("Escribe correctamente tu ingrediente: ")
-
+            elif shuco=='5':
+                print("¿Quieres agregarle algún otro ingrediente?")
+                shuco2 = input("")
+                if shuco2 =='1':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Costilla' + ' , ' + 'Salchicha' + ' || Tiempo de preparación:  8 minutos')
+                elif shuco2 == '2':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Costilla' + ' , ' + 'Chorizo' + ' || Tiempo de preparación:  9 minutos')
+                elif shuco2 == '3':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Costilla' + ' , ' + 'Salami' + ' || Tiempo de preparación:   7.5 minutos')
+                elif shuco2 == '4':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Costilla' + ' , ' + 'Longaniza' + ' || Tiempo de preparación:  10 minutos')
+                elif shuco2 == '5':
+                    cola.encolar('Nombre: ' + nombrepedido + ' ||  Shuco con ingredientes:' + 'Costilla' + ' , ' + 'Costilla' + ' || Tiempo de preparación:  12 minutos')
 
             return menu()
 
@@ -68,7 +117,7 @@ if __name__=='__main__':
 
         elif respuesta=='3':
             orden = cola.desencolar()
-            print('La orden está lista para:  ' + orden)
+            print('La orden está lista para    :' + orden)
             print('¡Regrese pronto!')
             return menu()
 
@@ -82,3 +131,5 @@ if __name__=='__main__':
 
 
     menu()
+
+    
