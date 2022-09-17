@@ -18,7 +18,7 @@ class Cola:
     #AGREGAR UNA PERSONA A LA COLA
     def encolar(self, data):
         node = Node(data)
-        if self.ultimo == None:
+        if self.cabeza == None:
             self.cabeza = node
             self.ultimo = self.cabeza
         else:
@@ -29,8 +29,8 @@ class Cola:
 
     #QUITAR UNA PERSONA DE LA COLA (PRIMERA QUE SALE)
     def desencolar(self):
-        if self.cabeza.data == None:
-            print("No hay ordenes por entregar")
+        if self.cabeza == None:
+            return None
         else:
             temp = self.cabeza.data
             self.cabeza = self.cabeza.siguiente
